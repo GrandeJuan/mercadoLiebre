@@ -5,6 +5,8 @@
     padding: 0px;
 }
 
+/* HEADER -------- Inicio */
+
 body {
     background-color: #ebebeb;
 }
@@ -52,13 +54,17 @@ body {
     padding: 5px 0px;
     font-size: 16px;
 }
-/* HEADER ------------------ */
+/* HEADER ----------- Fin */
+
+/* BANNER ------- Inicio */
 
 .banner {
     width: 100%;
 }
 
-/* BANNER ----------- */
+/* BANNER -------- Fin */
+
+/* MAIN ----------- Inicio */
 
 .main {
     width: 90%;
@@ -78,6 +84,7 @@ body {
     background-color: white;
     padding: 15px;
     margin-bottom: 10px;
+    position: relative;
 }
 
 .product-info i {
@@ -87,6 +94,9 @@ body {
     display: block;
     max-width: 50px;
     padding: 15px;
+    position: absolute;
+    right: 20px;
+    top: -15px;
 }
 
 .precios-main {
@@ -108,7 +118,9 @@ body {
     padding-top: 10px;
 }
 
-/* MAIN --------------- */
+/* MAIN -----------  Fin */
+
+/* FOOTER ------------  Inicio */
 
 .main-footer {
     text-align: center;
@@ -132,7 +144,12 @@ body {
     font-weight: 500;
 }
 
-/* FOOTER --------------- */
+/* FOOTER ------------  Fin */
+
+/* Media Query -------- Inicio */
+
+
+/* Tablet */
 
 @media (min-width: 769px) {
     .top-bar {
@@ -157,6 +174,8 @@ body {
         margin: 0px 5px;
     }
 }
+
+/* Desktop */
 
 @media (min-width: 1200px) {
     .top-bar, .navbar {
@@ -186,6 +205,8 @@ body {
         font-weight: 400;
     }
 }
+
+/* Media Query -------- Fin */
 
 /* COLORES ---
     Amarrillo #EAC926

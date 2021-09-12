@@ -16,13 +16,27 @@ body {
     padding: 20px;
 }
 
-.logo {
-    width: 200px;
+.top-bar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.search-bar input {
+    width: 85%;
+    font-family: 'Roboto';
 }
 
 .fill-top-bar {
     text-align: center;
     font-weight: 400;
+    font-size: 16px;
+    padding-top: 7px;
+}
+
+.bottom-bar{
+    margin-top: 12px;
 }
 
 .humburger-menu {
@@ -73,7 +87,7 @@ body {
 
 .main h2 {
     font-size: 24px;
-    padding-bottom: 10px;
+    margin: 15px 0px;
 }
 
 .product-box {
@@ -81,6 +95,8 @@ body {
 }
 
 .product-info {
+    display: flex;
+    flex-wrap: wrap;
     border-top: solid #ebebeb;
     background-color: white;
     padding: 15px;
@@ -89,32 +105,31 @@ body {
 }
 
 .product-info i {
-    border: #39b54a solid;
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
     color: #39b54a;
-    border-radius: 50px;
-    max-width: 50px;
-    padding: 15px;
-    position: absolute;
-    right: 1%;
-    top: 1%;
-}
-
-.fa-truck:before {
-    content: "\f0d1";
-    position: absolute;
-    top: 5%;
-    left: 10%;
 }
 
 .precios-main {
     font-size: 18px;
     font-weight: bold;
+    width: 30%;
 }
 
 .descuento-main {
     font-size: 16px;
     color: #39b54a;
     padding-top: 4px;
+    width: 70%;
 }
 
 .descripcion-main {
@@ -158,20 +173,54 @@ body {
 
 /* Media Query -------- Inicio */
 
-
-
-
-/* Tablet */
-@media (min-width: 361px) {
+/* Celular */
+@media (max-width: 767px) {
     /* HEADER -------- Inicio */
     .top-bar {
+        align-items: center;
+    }
+    
+    .logo {
+        width: 50%;
+    }
+    .search-bar{
+        width: 50%;
+    }
+
+    .fill-top-bar{
+        margin: auto;
+    }
+    /* HEADER -------- Fin */
+}
+
+/* Tablet */
+
+@media (min-width: 768px) {
+    /* HEADER -------- Inicio */
+    .top-bar, .navbar {
+        margin: auto;
+    }
+    
+    .top-bar {
         display: flex;
-        justify-content: space-between;
+        flex-wrap: wrap;
     }
+    .logo {
+        width: 33%;
+    }
+
+    .search-bar {
+        width: 33%;
+    }
+
     .fill-top-bar {
-        max-width: 350px;
-        text-align: right;
+        width: 33%;
     }
+
+    .search-bar input {
+        width: 90%;
+    }
+
     .humburger-menu {
         display: none;
     }
@@ -185,13 +234,25 @@ body {
     .navbar li {
         margin: 0px 5px;
     }
-    /* HEADER ----------- Fin */
-
+    /* HEADER -------- Fin */
     /* MAIN --------------- Inicio */
-    .product-box {
-        box-shadow: 0px 0px 10px gray;
+    .Section-ultima-visita {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
     }
     
+    .section-ofertas {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .product-box {
+        box-shadow: 0px 0px 10px gray;
+        width: 47%;
+        margin-top: 15px;
+    }
     .descripcion-main {
         display: inline-block;
     }
@@ -200,16 +261,12 @@ body {
 
 /* Desktop */
 
-@media (min-width: 769px) {
+@media (min-width: 1200px){
+    /* HEADER -------- Inicio */
     .top-bar, .navbar {
         max-width: 1200px;
         margin: auto;
     }
-
-    .logo {
-        width: 250px;
-    }
-
     .navbar {
         margin-top: 50px;
     }
@@ -218,15 +275,26 @@ body {
         align-items: center;
     }
 
+    .search-bar input {
+        width: 94%;
+    }
+
     .navbar li {
         margin: 0px 10px;
     }
 
     .fill-top-bar {
         max-width: none;
-        font-size: 18px;
         font-weight: 400;
     }
+    /* HEADER -------- Fin */
+    /* MAIN --------------- Inicio */
+    .product-box {
+        box-shadow: 0px 0px 10px gray;
+        width: 23%;
+        margin-top: 15px;
+    }
+    /* MAIN --------------- Fin */
 }
 
 /* Media Query -------- Fin */

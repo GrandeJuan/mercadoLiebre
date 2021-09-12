@@ -73,6 +73,7 @@ body {
 
 .main h2 {
     font-size: 24px;
+    padding-bottom: 10px;
 }
 
 .product-box {
@@ -91,26 +92,35 @@ body {
     border: #39b54a solid;
     color: #39b54a;
     border-radius: 50px;
-    display: block;
     max-width: 50px;
     padding: 15px;
     position: absolute;
-    right: 20px;
-    top: -15px;
+    right: 1%;
+    top: 1%;
+}
+
+.fa-truck:before {
+    content: "\f0d1";
+    position: absolute;
+    top: 5%;
+    left: 10%;
 }
 
 .precios-main {
     font-size: 18px;
+    font-weight: bold;
 }
 
 .descuento-main {
     font-size: 16px;
     color: #39b54a;
+    padding-top: 4px;
 }
 
 .descripcion-main {
     font-size: 16px;
     padding-top: 20px;
+    display: none;
 }
 
 .img-main {
@@ -149,9 +159,11 @@ body {
 /* Media Query -------- Inicio */
 
 
-/* Tablet */
 
-@media (min-width: 769px) {
+
+/* Tablet */
+@media (min-width: 361px) {
+    /* HEADER -------- Inicio */
     .top-bar {
         display: flex;
         justify-content: space-between;
@@ -173,11 +185,22 @@ body {
     .navbar li {
         margin: 0px 5px;
     }
+    /* HEADER ----------- Fin */
+
+    /* MAIN --------------- Inicio */
+    .product-box {
+        box-shadow: 0px 0px 10px gray;
+    }
+    
+    .descripcion-main {
+        display: inline-block;
+    }
+    /* MAIN --------------- Fin */
 }
 
 /* Desktop */
 
-@media (min-width: 1200px) {
+@media (min-width: 769px) {
     .top-bar, .navbar {
         max-width: 1200px;
         margin: auto;

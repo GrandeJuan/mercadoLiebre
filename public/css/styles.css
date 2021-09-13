@@ -149,6 +149,11 @@ body {
     padding-top: 10px;
 }
 
+.product-info:hover i {
+    transform: rotate(-90deg);
+    animation-duration: 1000ms;
+}
+
 /* MAIN HOME -----------  Fin */
 
 /* MAIN LOGIN -----------  Inicio */
@@ -208,12 +213,15 @@ body {
 }
 
 .enviar-boton {
-    color: white;
-    background-color: #1259c3;
     border-radius: 10px;
     padding: 5px;
     border: 0;
     box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06)
+}
+
+.enviar-boton:hover {
+    background-color: #1259c3;
+    color: white;
 }
 
 /* MAIN LOGIN -----------  Fin */
@@ -351,6 +359,8 @@ body {
 /* FOOTER ------------  Inicio */
 
 .main-footer {
+    display: flex;
+    flex-wrap: wrap;
     text-align: center;
     background-color: white;
 }
@@ -360,6 +370,33 @@ body {
     margin-bottom: 10px;
     color: #1259c3;
     padding-top: 15px;
+}
+
+.main-footer i:hover {
+    color: #39b54a;
+}
+
+.upper-row-footer {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: center;
+}
+
+.credit-card-footer {
+    width: 30%;
+}
+
+.gift-footer {
+    width: 30%;
+}
+
+.seguridad-footer {
+    width: 30%;
+}
+
+.lower-row-footer {
+    width: 100%;
 }
 
 .text-footer {
@@ -398,6 +435,16 @@ body {
     }
 
     /* HEADER -------- Fin */
+
+    /* MAIN LOGIN --------------- Inicio */
+
+    .main-login {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50vh;
+    }
+    /* MAIN LOGIN --------------- Fin */
 }
 
 /* Tablet */
@@ -449,7 +496,8 @@ body {
     }
 
     /* HEADER -------- Fin */
-    /* MAIN --------------- Inicio */
+
+    /* MAIN HOME --------------- Inicio */
     .Section-ultima-visita {
         display: flex;
         flex-wrap: wrap;
@@ -463,16 +511,30 @@ body {
     }
 
     .product-box {
-        box-shadow: 0px 0px 10px gray;
         width: 47%;
         margin-top: 15px;
     }
 
-    .descripcion-main {
+    .product-info:hover .descripcion-main {
         display: inline-block;
     }
 
-    /* MAIN --------------- Fin */
+    .product-box:hover {
+        box-shadow: 0px 0px 30px gray;
+    }
+
+    /* MAIN HOME --------------- Fin */
+
+    /* MAIN LOGIN --------------- Inicio */
+
+    .main-login {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 65vh;
+    }
+    /* MAIN LOGIN --------------- Fin */
+
 }
 
 /* Desktop */
@@ -527,7 +589,7 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 50vh;
+        height: 65vh;
     }
 
     .form-login {

@@ -16,7 +16,7 @@ body {
     padding: 20px;
 }
 
-.top-bar{
+.top-bar {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -35,7 +35,7 @@ body {
     padding-top: 7px;
 }
 
-.bottom-bar{
+.bottom-bar {
     margin-top: 12px;
 }
 
@@ -49,6 +49,7 @@ body {
     text-align: center;
     font-size: 20px;
     margin: auto;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06)
 }
 
 .navbar {
@@ -59,15 +60,16 @@ body {
     list-style: none;
     margin: 0%;
     padding: 0%;
-} 
+}
 
 .navbar a {
     text-decoration: none;
-    color: #666;
+    color: black;
     display: inline-block;
     padding: 5px 0px;
     font-size: 16px;
 }
+
 /* HEADER ----------- Fin */
 
 /* BANNER ------- Inicio */
@@ -78,7 +80,7 @@ body {
 
 /* BANNER -------- Fin */
 
-/* MAIN ----------- Inicio */
+/* MAIN HOME ----------- Inicio */
 
 .main {
     width: 90%;
@@ -88,6 +90,10 @@ body {
 .main h2 {
     font-size: 24px;
     margin: 15px 0px;
+}
+
+.section-ofertas {
+    margin-bottom: 22px;
 }
 
 .product-box {
@@ -129,6 +135,7 @@ body {
     font-size: 16px;
     color: #39b54a;
     padding-top: 4px;
+    text-align: center;
     width: 70%;
 }
 
@@ -143,12 +150,71 @@ body {
     padding-top: 10px;
 }
 
-/* MAIN -----------  Fin */
+/* MAIN HOME -----------  Fin */
+
+/* MAIN LOGIN -----------  Inicio */
+
+.form-login {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 25px
+}
+
+.form-login input {
+    width: 70%;
+}
+
+.usuario-pass {
+    width: 100%;
+    font-size: 20px;
+    margin: 10px;
+}
+
+.usuario-login {
+    margin: 20px 0px;
+}
+
+.usuario-login input {
+    border-radius: 10px;
+    padding: 5px;
+    border: 0;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06)
+}
+
+.pass-login {
+    margin: 20px 0px;
+}
+
+.pass-login input{
+    padding: 5px;
+    border-radius: 10px;
+    border: 0;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06)
+}
+
+.form-login a{
+    width: 100%;
+    font-size: 20px;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+}
+
+.enviar-boton {
+    color: white;
+    background-color: #1259c3;
+    border-radius: 10px;
+    padding: 5px;
+    border: 0;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06)
+}
 
 /* FOOTER ------------  Inicio */
 
 .main-footer {
     text-align: center;
+    background-color: white;
 }
 
 .main-footer i {
@@ -175,37 +241,43 @@ body {
 
 /* Celular */
 @media (max-width: 767px) {
+
     /* HEADER -------- Inicio */
     .top-bar {
         align-items: center;
     }
-    
-    .logo {
-        width: 50%;
-    }
-    .search-bar{
+
+    .top-bar a {
         width: 50%;
     }
 
-    .fill-top-bar{
+    .search-bar {
+        width: 50%;
+    }
+
+    .fill-top-bar {
         margin: auto;
     }
+
     /* HEADER -------- Fin */
 }
 
 /* Tablet */
 
 @media (min-width: 768px) {
+
     /* HEADER -------- Inicio */
-    .top-bar, .navbar {
+    .top-bar,
+    .navbar {
         margin: auto;
     }
-    
+
     .top-bar {
         display: flex;
         flex-wrap: wrap;
     }
-    .logo {
+
+    .top-bar a {
         width: 33%;
     }
 
@@ -224,16 +296,20 @@ body {
     .humburger-menu {
         display: none;
     }
+
     .navbar {
         display: flex;
         justify-content: space-between;
     }
+
     .navbar ul {
         display: flex;
     }
+
     .navbar li {
         margin: 0px 5px;
     }
+
     /* HEADER -------- Fin */
     /* MAIN --------------- Inicio */
     .Section-ultima-visita {
@@ -241,7 +317,7 @@ body {
         flex-wrap: wrap;
         justify-content: space-around;
     }
-    
+
     .section-ofertas {
         display: flex;
         flex-wrap: wrap;
@@ -253,20 +329,25 @@ body {
         width: 47%;
         margin-top: 15px;
     }
+
     .descripcion-main {
         display: inline-block;
     }
+
     /* MAIN --------------- Fin */
 }
 
 /* Desktop */
 
-@media (min-width: 1200px){
+@media (min-width: 1200px) {
+
     /* HEADER -------- Inicio */
-    .top-bar, .navbar {
+    .top-bar,
+    .navbar {
         max-width: 1200px;
         margin: auto;
     }
+
     .navbar {
         margin-top: 50px;
     }
@@ -287,14 +368,28 @@ body {
         max-width: none;
         font-weight: 400;
     }
+
     /* HEADER -------- Fin */
-    /* MAIN --------------- Inicio */
+    /* MAIN HOME --------------- Inicio */
+
+    .main {
+        max-width: 1200px;
+    }
+
     .product-box {
         box-shadow: 0px 0px 10px gray;
-        width: 23%;
+        width: 24%;
         margin-top: 15px;
     }
-    /* MAIN --------------- Fin */
+
+    /* MAIN HOME --------------- Fin */
+    /* MAIN LOGIN --------------- Inicio */
+    .form-login {
+        max-width: 1200px;
+        margin: auto;
+        padding-bottom: 15px;
+    }
+    /* MAIN LOGIN --------------- Fin */
 }
 
 /* Media Query -------- Fin */
